@@ -9,6 +9,12 @@
       forAllSystems = forSystems supportedSystems;
     in
     {
+      templates = {
+        microvm-interactive = {
+          path = ./templates/microvm-interactive;
+          description = "A microvm that can demonstrate NixOS interactively";
+        };
+      };
       bundlers = (forAllSystems (system: pkgs: {
         runtimeReport = drv: import ./bundlers/runtimeReport { inherit drv pkgs; };
       }));
