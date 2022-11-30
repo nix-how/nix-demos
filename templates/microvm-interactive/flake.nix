@@ -63,7 +63,7 @@
                 {
                   mountPoint = "/";
                   image = "rootfs.img";
-                  size = 20480;
+                  size = 10240;
                 }
                 {
                   image = "nix-store-overlay.img";
