@@ -14,10 +14,6 @@
           path = ./templates/microvm-interactive;
           description = "A microvm that can demonstrate NixOS interactively";
         };
-        scala = {
-          path = ./templates/scala;
-          description = "A scala example using sbt";
-        };
       };
       bundlers = (forAllSystems (system: pkgs: {
         runtimeReport = drv: import ./bundlers/runtimeReport { inherit drv pkgs; };
