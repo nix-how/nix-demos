@@ -54,8 +54,9 @@
             };
             environment.systemPackages = with pkgs; [ magic-wormhole bore-cli ];
             services.logind.extraConfig = "RuntimeDirectorySize=2G";
+            services.mingetty.autologinUser = "root";
             microvm = {
-              vcpu = 4; 
+              vcpu = 4;
               interfaces = [ {
                 type = "user";
                 id = "microvm-a1";
