@@ -47,7 +47,10 @@
             users.users.root.password = "";
             nix = {
               nixPath = [ "nixpkgs=${nixpkgs}" ];
-              extraOptions = "experimental-features = nix-command flakes";
+              extraOptions = ''
+                experimental-features = nix-command flakes
+                accept-flake-config = true
+              '';
             };
             environment.systemPackages = with pkgs; [ magic-wormhole bore-cli ];
             services.logind.extraConfig = "RuntimeDirectorySize=2G";
