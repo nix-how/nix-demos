@@ -2,6 +2,22 @@
 
 Sometimes you want to show people the power of Nix.
 
+## MicroVMs
+
+To run the MicroVM example from this repo, there are two approaches:
+
+### Directly, with no modifications
+
+`nix run github:nix-how/nix-demos?dir=templates/microvm-interactive#microvm`
+
+### Clone the template and start modifying, then run
+
+Create a directory to start working in, then:
+
+1. `nix flake init --template github:nix-how/nix-demos#microvm-interactive`
+2. optionally edit the `flake.nix` or `configuration.nix` to change how the microvm behaves
+2. `nix run .#microvm`
+
 ## runtimeReport
 
 Based on [Recovering Nix derivation attributes of runtime
