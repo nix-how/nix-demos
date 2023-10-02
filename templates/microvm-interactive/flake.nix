@@ -38,6 +38,7 @@
               unitConfig.ConditionPathExists = "!/root/flake.nix";
               serviceConfig.Type = "oneshot";
               script = ''
+                mkdir -p /etc/nixos
                 cp --no-preserve=mode ${./flake.nix} /etc/nixos/flake.nix
                 cp --no-preserve=mode ${./flake.lock} /etc/nixos/flake.lock
                 cp --no-preserve=mode ${./configuration.nix} /etc/nixos/configuration.nix
