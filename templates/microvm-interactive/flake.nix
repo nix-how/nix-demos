@@ -10,8 +10,8 @@
   };
 
   nixConfig = {
-    extra-substituters = [ "https://microvm.cachix.org" ];
-    extra-trusted-public-keys = [ "microvm.cachix.org-1:oXnBc6hRE3eX5rSYdRyMYXnfzcCxC7yKPTbZXALsqys=" ];
+    extra-substituters = [ "https://microvm.cachix.org" "https://poetry2nix.cachix.org" ];
+    extra-trusted-public-keys = [ "microvm.cachix.org-1:oXnBc6hRE3eX5rSYdRyMYXnfzcCxC7yKPTbZXALsqys=" "poetry2nix.cachix.org-1:2EWcWDlH12X9H76hfi5KlVtHgOtLa1Xeb7KjTjaV/R8=" ];
   };
 
   outputs = { self, nixpkgs, microvm }:
