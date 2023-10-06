@@ -63,7 +63,7 @@
                 id = "microvm-a1";
                 mac = "02:00:00:00:00:01";
               } ];
-              balloonMem = 4096;
+              balloonMem = 6144;
               volumes = [
                 {
                   mountPoint = "/";
