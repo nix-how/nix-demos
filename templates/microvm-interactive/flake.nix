@@ -2,7 +2,7 @@
   description = "NixOS in MicroVMs";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
     microvm = {
       url = "github:astro/microvm.nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -57,6 +57,7 @@
             services.logind.extraConfig = "RuntimeDirectorySize=2G";
             services.mingetty.autologinUser = "root";
             microvm = {
+              optimize.enable = false;
               vcpu = 4;
               interfaces = [ {
                 type = "user";
